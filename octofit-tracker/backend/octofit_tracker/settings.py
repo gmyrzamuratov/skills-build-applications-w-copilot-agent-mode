@@ -86,6 +86,8 @@ DATABASES = {
     }
 }
 
+# Djongo is used as the database engine for MongoDB integration
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
