@@ -2,22 +2,25 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
-from django.http import Http404
-from rest_framework.decorators import api_view
+from django.http import Http404, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
 client = MongoClient('mongodb://localhost:27017/')
 db = client['octofit_db']
 
-@api_view(['GET'])
-def api_root(request, format=None):
-    return Response({
-        'users': '/users/',
-        'teams': '/teams/',
-        'activity': '/activity/',
-        'leaderboard': '/leaderboard/',
-        'workouts': '/workouts/',
+CODESPACE_URL = "https://laughing-space-invention-jjrrqw595jqh5x4g-8000.app.github.dev"
+LOCAL_URL = "http://localhost:8000"
+
+@csrf_exempt
+def api_root(request):
+    return JsonResponse({
+        "message": "Welcome to the OctoFit Tracker API!",
+        "endpoints": {
+            "codespace": CODESPACE_URL,
+            "local": LOCAL_URL
+        }
     })
 
 # User Views

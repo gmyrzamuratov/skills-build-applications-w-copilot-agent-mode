@@ -25,7 +25,12 @@ SECRET_KEY = "django-insecure-_9s%&!7p&0@8(f72cc8z%#i)nlt_!q0f5j)li9i#_$m7xh@gqy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "*",
+    "localhost",
+    "127.0.0.1",
+    "laughing-space-invention-jjrrqw595jqh5x4g-8000.app.github.dev"
+]
 
 
 # Application definition
@@ -138,5 +143,3 @@ CORS_ALLOW_HEADERS = [
 CORS_ALLOW_METHODS = [
     '*',
 ]
-
-ALLOWED_HOSTS = ["*"]
