@@ -79,8 +79,10 @@ WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "djongo",
+        "NAME": "octofit_db",
+        "HOST": "localhost",
+        "PORT": 27017,
     }
 }
 
@@ -136,7 +138,3 @@ CORS_ALLOW_METHODS = [
 ]
 
 ALLOWED_HOSTS = ["*"]
-
-# MongoDB connection settings (for reference in views)
-MONGO_DATABASE_NAME = "octofit_db"
-MONGO_URI = "mongodb://localhost:27017/"
