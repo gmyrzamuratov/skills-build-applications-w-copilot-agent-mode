@@ -16,6 +16,17 @@
                 "DJANGO_SETTINGS_MODULE": "octofit_tracker.settings"
             },
             "python": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python"
+        },
+        {
+          "name": "Run React Frontend",
+          "type": "node",
+          "request": "launch",
+          "cwd": "${workspaceFolder}/octofit-tracker/frontend",
+          "runtimeExecutable": "npm",
+          "runtimeArgs": [
+            "start"
+          ],
+          "console": "integratedTerminal"
         }
     ]
 }
