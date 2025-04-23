@@ -14,7 +14,8 @@
             "justMyCode": true,
             "env": {
                 "DJANGO_SETTINGS_MODULE": "octofit_tracker.settings"
-            }
+            },
+            "python": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python"
         }
     ]
 }
