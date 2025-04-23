@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
-  // \-8000.app.github.dev\/api\/workouts
+  // -8000.app.github.dev/api/workouts
   useEffect(() => {
     fetch('https://laughing-space-invention-jjrrqw595jqh5x4g-8000.app.github.dev/workouts/')
       .then(res => res.json())
