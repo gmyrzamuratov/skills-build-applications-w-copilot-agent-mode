@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function Teams() {
   const [teams, setTeams] = useState([]);
-
+  // \-8000.app.github.dev\/api\/teams
   useEffect(() => {
     fetch('https://laughing-space-invention-jjrrqw595jqh5x4g-8000.app.github.dev/teams/')
       .then(res => res.json())
