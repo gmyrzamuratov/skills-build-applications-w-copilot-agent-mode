@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function Leaderboard() {
   const [leaders, setLeaders] = useState([]);
-  // \-8000.app.github.dev\/api\/leaderboard
+  //  \-8000.app.github.dev\/api\/leaderboard
   useEffect(() => {
     fetch('https://laughing-space-invention-jjrrqw595jqh5x4g-8000.app.github.dev/leaderboard/')
       .then(res => res.json())
